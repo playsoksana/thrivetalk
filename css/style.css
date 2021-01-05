@@ -1,0 +1,202 @@
+:root {
+  --primary-text: #22356f;
+  --accent: #f9b640;
+  --logo-color: #62d0df;
+  --background-primary: #ffffff;
+  --background-hero: #e5e5e5;
+  --white-text: #ffffff;
+  --background-blue: #62d0df;
+  --lifting: #ffe2de;
+  --spinning: #c4e769;
+  --iron: #62d0df;
+  --second-iron: #0052c1;
+  --physical: #22356f;
+  --mental: #0052c1;
+  --crossfit: #dee1ff;
+  --aerobics: #8f00ff;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.03em;
+}
+
+.conteiner {
+  width: 1437px;
+  padding: 0;
+  margin: 0 auto;
+  border: 2px solid tomato;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+/* logo */
+.link-logo {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--logo-color);
+}
+
+/* header */
+.header {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0em;
+}
+
+.header .conteiner {
+  padding: 20px 131px 20px 179px;
+}
+
+.header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .button {
+  margin-left: auto;
+  border: 0;
+  border-radius: 50px;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-family: inhirit;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--white-text);
+  background-color: var(--logo-color);
+}
+
+.header-list {
+  display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header .link-logo {
+  margin-right: 315px;
+}
+
+.header-list .item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.header .link-nav {
+  padding: 15px 5px;
+}
+
+.header .link-nav:hover,
+.header .link-nav:focus {
+  font-weight: 500;
+  color: var(--physical);
+}
+
+/* hero */
+
+.hero .conteiner {
+  position: relative;
+
+  padding: 85px 792px 85px 179px;
+}
+
+.hero .list::after {
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  right: -45px;
+  content: "";
+  display: inline-block;
+  width: 850px;
+  height: 850px;
+  background-image: url(../image/hero.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.hero-conteiner {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.03em;
+}
+
+.hero .link-logo {
+  display: inline-block;
+  margin-bottom: 80px;
+}
+
+.hero .title {
+  margin-bottom: 80px;
+  margin-top: 0;
+
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  color: var(--physical);
+}
+
+.hero .paragraph {
+  margin-bottom: 63px;
+  margin-top: 0;
+}
+
+.hero .list {
+  display: flex;
+}
+
+.list-button .item {
+  display: inline-block;
+}
+
+.list-button .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.list-button .link {
+  display: block;
+  padding: 10px 30px;
+  height: 100%;
+  width: 100%;
+
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.list-button .who {
+  background-color: var(--accent);
+  color: var(--white-text);
+}
+
+.list-button .do {
+  color: var(--accent);
+}
+
+/* thrive */
+
+.thrive .conteiner {
+  padding: 151px 704px 95px 179px;
+}
