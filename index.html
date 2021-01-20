@@ -10,19 +10,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-</head>
+    </head>
 <body>
     <header class="header">
         <div class="conteiner">
             <nav class="navigation">
                 <a href="" class="link link-logo"><span class="logo">Thrivetalk</span></a>
                 <ul class="header-list list">
-                    <li class="item"><a href="" class="link link-nav">Home</a></li>
-                    <li class="item"><a href="" class="link link-nav">About</a></li>
-                    <li class="item"><a href="" class="link link-nav">Services</a></li>
-                    <li class="item"><a href="" class="link link-nav">Blog</a></li>
+                    <li class="item"><a href="#" class="link link-nav">Home<div class="after"></div>
+                    </a></li>
+                    <li class="item"><a href="#" class="link link-nav">About<div class="after"></div></a></li>
+                    <li class="item"><a href="#" class="link link-nav">Services<div class="after"></div></a></li>
+                    <li class="item"><a href="#" class="link link-nav">Blog<div class="after"></div></a></li>
                 </ul>
-                <button type="button" class="button">CONTACT US</button>
+                <button type="button" class="button" data-open-modal>
+                    <span class="span">register</span>
+                    <svg class="icon" width="18" height="18">
+                        <use href="./image/icon.svg#icon-play"></use>
+                    </svg>
+                </button>
             </nav>
         </div>
     </header>
@@ -58,6 +64,7 @@
                         access your laptop or mobile phone. Become your best self with ThriveTalk. Start therapy now with a licensed
                         therapist!</span></p>
                </div>
+               
                <img class="img" src="./image/starts.jpg" alt="girl" width="525">
             </div>
         </section>
@@ -117,42 +124,42 @@
         </section>
         <section class="description">
             <div class="conteiner">
-                <h2 class="hidden"></h2>
+                <h2 class="hidden">text</h2>
                 <ul class="list">
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Nutritional Plans</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                        <p class="paragraph">Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Weight Loss</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                        <p class="paragraph">Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Mental Peace</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                        <p class="paragraph">Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Home Training</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                        <p class="paragraph">Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Work/Life Balance</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                        <p class="paragraph"> Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 <li class="item">
                     <a href="" class="link">
                         <h3 class="title-item">Cardio</h3>
-                        <paragraph>Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</paragraph>
+                    <p class="paragraph">Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.</p>
                     </a>
                 </li>
                 </ul>
@@ -160,7 +167,7 @@
         </section>
         <section class="mmd">
             <div class="conteiner">
-                <img src="./image/mdd.jpg" alt="man" width="480px">
+                <img src="./image/mdd.jpg" alt="man" width="100">
                 <div class="conteiner-text">
                     <h2 class="title">YOU SHOULD ALSO KNOW</h2>
                     <p class="paragraph">MDD affects more than 16.1 million 
@@ -186,18 +193,17 @@
 <footer class="footer">
 <div class="conteiner">
    <div class="footer-conteiner">
-        <img src="./image/woman.jpg" alt="woman" width="570px">
+        <img src="./image/woman.jpg" alt="woman" width="570">
         <div class="text-conteiner">
             <div class="info">
                 <h2 class="title">SOME INFO</h2>
                 <p class="paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
             </div>
+
             <div class="enfold">
                 <h2 class="title">ENFOLD HEALTH</h2>
-                <adress class="adress">Main Street 1, Olcott
-Buffalo, United States
-</adress>
-            <a class="link tel" href="tel:+555 283 784 333">+555 283 784 333</a>
+            <p class="adress">Main Street 1, Olcott Buffalo, United States</p>
+            <a class="link tel" href="tel:+555283784333">+555 283 784 333</a>
             <a class="mail" href="mailto:office@enfold-health.com">office@enfold-health.com</a>
             </div>
             <div class="hours">
@@ -214,6 +220,35 @@ Buffalo, United States
         <span class="text">Copyright - ThriveTalk 2017</span>
     </div>
 </div>
-</footer>   
+</footer>  
+<div class="backdrop is-hidden" data-backdrop>
+    <div class="modal">
+    <button type="button" class="button" data-close-modal>
+        <svg class="icon" width="30" height="30">
+            <use href="./image/icon.svg#icon-cancel"></use>
+        </svg>
+    </button>
+    <form class="form" action="#" >
+        <b class="sing">Sing in form</b>
+        <div class="form-conteiner">
+            <label class="lable form-name">                
+                <input class="input" type="text" name="username" placeholder=" ">
+                <span class="span">username</span>
+            </label>
+            <label class="lable form-password">                
+                <input class="input" type="password" name="password" placeholder=" ">
+                <span class="span">password</span>
+            </label> 
+            <button class="submit" type="submit">
+                <svg class="close" width="60" height="60">
+                    <use href="./image/icon.svg#icon-plays"></use>
+                </svg>
+            </button>
+       </div>
+       
+    </form>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>

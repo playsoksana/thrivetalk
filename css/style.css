@@ -101,6 +101,8 @@ body {
 }
 
 .header .button {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   border: 0;
   border-radius: 50px;
@@ -113,6 +115,23 @@ body {
   text-align: center;
   color: var(--white-text);
   background-color: var(--logo-color);
+  text-transform: uppercase;
+  fill: var(--background-primary);
+  transition: background-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header .button:hover,
+.header .button:focus {
+  background-color: var(--physical);
+  outline: none;
+}
+
+.header .button .span {
+  margin-right: 10px;
+}
+
+.header .button .icon {
+  fill: currentColor;
 }
 
 .header-list {
@@ -125,17 +144,42 @@ body {
   margin-right: 315px;
 }
 
+.header .item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
 .header-list .item:not(:last-child) {
   margin-right: 15px;
 }
 
 .header .link-nav {
   padding: 15px 5px;
+
+  transition: color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header .after {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--physical);
+  transform: translateX(55%);
+  transition: transform 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header .item:hover .after,
+.header .item:focus .after {
+  transform: translateX(-50%);
 }
 
 .header .link-nav:hover,
 .header .link-nav:focus {
-  font-weight: 500;
   color: var(--physical);
 }
 
@@ -542,7 +586,7 @@ body {
 
 .smile .conteiner {
   display: flex;
-  justify-content: spase-between;
+  justify-content: space-between;
 }
 
 .smile .conteiner-text {
@@ -556,7 +600,7 @@ body {
   padding: 15px 0;
 
   margin-bottom: 215px;
-  font-weight: 300px;
+  font-weight: 300;
   font-size: 16px;
   line-height: 0.8;
   letter-spacing: 0.06em;
@@ -662,4 +706,153 @@ footer .adress,
   width: 9px;
   height: 12px;
   margin-right: 6px;
+}
+
+/* modal */
+.backdrop {
+  position: relative;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+}
+
+.backdrop .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  width: 600px;
+  padding: 70px 60px 140px;
+  background-color: #2b2f38;
+  transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.backdrop .button {
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  fill: #23282d;
+}
+
+.backdrop .sing {
+  display: block;
+  text-transform: capitalize;
+  color: var(--background-primary);
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form .form-conteiner {
+  position: relative;
+  background-color: #23282d;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.form .lable {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.form .input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px 20px;
+}
+
+.form .span {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0%, -50%);
+  color: #80838d;
+  font-weight: 700;
+  transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    color 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form .lable:hover .span,
+.form .lable:focus .span,
+.input:not(:placeholder-shown) + .span {
+  transform: translate(-140%, -50%);
+  color: #0d0f11;
+}
+
+.form-conteiner::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 3px;
+  background-color: #3d414c;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+}
+
+.form .submit {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  transform: translate(50%, -50%);
+
+  width: 60px;
+  height: 60px;
+  color: #3d414c;
+  cursor: pointer;
+}
+
+.submit .close {
+  fill: currentColor;
+}
+
+.submit::after {
+  position: absolute;
+  z-index: -2;
+  content: "";
+
+  display: block;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 50%;
+  transform: translate(-25%, -50%);
+  background-color: #23282d;
+  border-radius: 50%;
 }
